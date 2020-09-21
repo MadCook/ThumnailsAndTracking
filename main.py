@@ -63,12 +63,11 @@ def create_thumbnail(fileName, file_path, file=None):
     #Create a directory if it doesn't exist already:
     new_path = file_path.replace(defaults['startingDirectory'],'')
     create_directory(new_path)
-    print(file)
-    image = Image.open(file) if file else Image.open(file_path+'/'+fileName)
-    maxSize = (defaults['thumnailSize'],defaults['thumnailSize'])
-    image.thumbnail(maxSize)
-    image.save(new_path+'/'+fileName)
-    pass
+    # print(file)
+    #image = Image.open(file) if file else Image.open(file_path+'/'+fileName)
+    #maxSize = (defaults['thumnailSize'],defaults['thumnailSize'])
+    #image.thumbnail(maxSize)
+    #image.save(new_path+'/'+fileName)
 
 def create_directory(filePath):
     try:
@@ -79,7 +78,7 @@ def create_directory(filePath):
 
 def do_work(filePath,fileName, json):
     if '.zip' in fileName:
-        json = traverseZip(fileName, filePath, json)
+         json = traverseZip(fileName, filePath, json)
     elif '.png' in fileName:
         # Open fileName
         json = process_file(fileName, filePath, None, json)
@@ -92,6 +91,5 @@ def start():
     with open(defaults['jsonOutput'], 'w') as results:
         results.write(json.dumps(startingJson))
 
-print(Image.VERSION)
 defaults = getConfig('config.json')
 start()
