@@ -1,1 +1,1 @@
-# ThumnailsAndTracking
+# ThumbnailsAndTracking

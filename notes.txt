@@ -1,0 +1,51 @@
+
+Grab top directory you are running from
+Probably from config file
+
+Accept param pointing at new config file
+
+Two features probably best if done together:
+Piece together a json with directory structure and image names in
+ each directory maintaining structure
+For each image make a thumbnail of the image and place in identical directory
+  structure
+  Subpoint: Check if thumbnail already exists and don't override it. If
+   thumbnail exists read in tags to above json
+
+Ideas and approaches:
+- Allow for existing json to simplify number of checks for existing files
+  + Speed
+  - Complexity of algorithm
+- Need to make sure that you unzip files as few times as possible
+Json object needs to be in a format that maintains structure of directory
+
+
+Ideas for json:
+{
+  "directroyNameA": {
+      "files": ['fileName.png', 'fileName.jpg']
+      "tags": ['a', 'b'] # Means all files get tagged :/ 
+      "subDirectory": {...}
+  }
+
+  "directoryNameB": {
+      "directory": True
+      "objects": [
+          {
+            'directory': true,
+            "objects": [..]
+            'name': 'subB'
+          }, {
+            'directory': false,
+            'name': 'image.png'
+            'tags': ['','']
+          }
+      ]
+      "tags": ['','']
+  }
+}
+
+
+Or:
+[('path/fileName', ['tags'])....]OR:
+[{'path':'', 'fileName':'', 'tags': [...]}]
