@@ -24,7 +24,7 @@ Ideas for json:
 {
   "directroyNameA": {
       "files": ['fileName.png', 'fileName.jpg']
-      "tags": ['a', 'b'] # Means all files get tagged :/ 
+      "tags": ['a', 'b'] # Means all files get tagged :/
       "subDirectory": {...}
   }
 
@@ -49,3 +49,18 @@ Ideas for json:
 Or:
 [('path/fileName', ['tags'])....]OR:
 [{'path':'', 'fileName':'', 'tags': [...]}]
+
+
+Steps:
+ Read in json created by thumnailcreationTool
+Start up a latex doc named by name from config
+ Iterate through each object First section Artist name
+ Atleast down one if not two of the area so:
+ artist/folder/subfolder/remainder
+ section/ subheader/ subsubheader? (Look in pyLatex for this ability)
+ then for each mark as
+ [image,    image,    image,    image,    image]
+ [remainder,remainder,remainder,remainder,remainder]
+ I'm thinking lines of 5 but make that a config choice.
+
+I'd like to chose depth as a param as well but probably limitted by pyLatex

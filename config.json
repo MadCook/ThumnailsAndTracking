@@ -1,0 +1,11 @@
+{
+  "startingDirectory": "/home/madcook/Documents/Roll20/Thumbnails/",
+  "thumbNailDirectory": "/home/madcook/Documents/Roll20/Thumbnails/",
+  "jsonOutput": "results.json",
+  "thumnailSize": 100,
+  "directoryDepth": 3,
+  "lineWidth": 5,
+  "pdfPath": "/home/madcook/Documents/Roll20/",
+  "fakePath": "/media/madcook/Maddies Media Tank/Roll20",
+  "fakeImage": "/home/madcook/Documents/Roll20/Thumbnails/LycanTime/Abraham.png"
+}
